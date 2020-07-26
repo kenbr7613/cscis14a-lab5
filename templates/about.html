@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link href="{{ url_for('static', filename='./css/index.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+
+    {% if session_username is defined %}
+
+        <h1>Hi, {{ session_username }} !</h1>
+
+    {% else %}
+
+        <h1>Hi, guest!</h1>
+
+    {% endif %}
+    <p>This webiste is part of a project for the Summer 2020 Harvard course CSCS S-14a.
+       This project was built to show:</p>
+    <ul>
+        <li>Connections in a relational database with foreign keys</li>
+        <li>Message Flashing</li>
+        <li>Style-sheet usage</li>
+        <li>Extended database tables</li>
+        <li>Performance</li>
+    </ul>
+
+
+{% endblock %}

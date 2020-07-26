@@ -76,6 +76,10 @@ def logout():
     flash('Logout succesful!')
     return redirect(url_for('index'))
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 
 #GET & POST /newpost
 @app.route('/newpost', methods=['GET', 'POST'])
